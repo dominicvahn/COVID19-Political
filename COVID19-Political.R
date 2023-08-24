@@ -19,14 +19,16 @@ options(Encoding="UTF-8")
 # The dataset is constantly updated, which is core to the analysis. As such, I have setup R to read the newest version.
 # The initial analysis was prepared on 3-27-2019 and uses that dataset, which is included. 
 
-setwd("C:/Users/Dom/Desktop/Applied Regression")
+
+path_to_data <- "" # Set as path to wherever the data is. 
+setwd("")
 URL <- GET("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv", header=T)
 COVID <- read_csv(content(URL, "text"))
-#COVID <- read.csv("C:/Users/Dom/Desktop/Applied Regression/NYTCOVID19.txt") # Legacy Version
-Gini <- read.csv("C:/Users/Dom/Desktop/Applied Regression/GiniCounty.csv")
-Elec2016 <- read.csv("C:/Users/Dom/Desktop/Applied Regression/2016Elect.txt")
-POP <- read.csv("C:/Users/Dom/Desktop/Applied Regression/POP.csv")
-Csize <- read.csv("C:/Users/Dom/Desktop/Applied Regression/Csize.csv")
+#COVID <- read.csv("") # Legacy Version
+Gini <- read.csv("")
+Elec2016 <- read.csv("")
+POP <- read.csv("")
+Csize <- read.csv("")
 
 # Clean Data Sets to add 2019 population and 2016 Election County Results
 # The original datasets have a lot of information we do not care about, this removes all of that before merging.
